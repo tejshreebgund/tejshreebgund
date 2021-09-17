@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .serch{
+        text-align: center;
+        margin-bottom: 2%;
+        margin-right: 25%;
+        margin-left: 10%;
+    }
+    #data,#imgs,#mname,#ryear,#actor,#dir,#rating{
+        margin-right: 25%;
+        margin-left: 35%;
+    }
+</style>
+<body>
+    <div class="serch">
+    <input type="text" id="movie" placeholder="Enter moviename">
+    <button onclick="make()">submit</button>
+</div>
+    <div id="data"></div>
+   
+    <img id="imgs" />
+    <div id="mname"></div>
+    <div id="ryear"></div>
+    <div id="actor"></div>
+    <div id="dir"></div>
+    <div id="rating"></div>
+    
+</body>
+</html>
+<script>
+     async function make()
+    {
+try{
+    
+    let movie=document.getElementById("movie").value;
+    let res=await fetch(`http://www.omdbapi.com/?apikey=af3dcdf6&t=${movie}`);
+       let data=await res.json();
+       let data_div = document.getElementById("data");
+    let image = document.getElementById("imgs");
+    image.src = data.Poster;
+    let child = document.getElementById("mname");
+    child.innerText = `Movie_name :-`  +data.Title;
+    let child1 = document.getElementById("ryear");
+    child1.innerText = "Release Year:- " + data.Year;
+    let child2 = document.getElementById("actor");
+    child2.innerText = `Actors:-`+data.Actors;
+    let child3 = document.getElementById("dir");
+    child3.innerText = `Directors:-`+data.Director;
+    let child4 = document.createElement("rating");
+    child4.innerText = `Ratings:-:- `+data.Ratings.value;
+    console.log('details', data);
+   // console.log("checking");
+    
+}
+catch(err){
+    console.log("err",err);
+}
+    }
+</script>
