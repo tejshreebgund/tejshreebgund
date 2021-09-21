@@ -1,0 +1,577 @@
+C:\Users\tejsh>mongo
+MongoDB shell version v5.0.2
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("9b58b089-062b-49fa-948b-388bb5f2cc5c") }
+MongoDB server version: 5.0.2
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+We recommend you begin using "mongosh".
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2021-09-20T23:40:18.944+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> db.users.insertMany([{fname:"manasi",lname:"shinde",gender:"female",email:"mansi@gmail.com",ip:123009,age:21},{fname:""}])t
+uncaught exception: SyntaxError: unexpected token: identifier :emale",email:"mansi@gmail.com",ip:123009,age:21},{fname:""}])t
+@(shell):1:122ertMany([{fname:"manasi",lname:"shinde",gender:"female",email:"mansi@gmail.com",ip:123009,age:21},{fname:""}])
+>
+>
+>
+>
+> db.users.insertMany([{fname:"krishna",lname:"gilbile",gender:"male",email:"krishna@gmail.com",ip:133009,age:11},{fname:"teju",lname:"gund",gender:"female",email:"teju@gmail.com",ip:123009,age:22},{fname:"ishwari",lname:"gilbile",gender:"female",email:"ishwari@gmail.com",ip:124567,age:12}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("6149da2fef0911faa0f7a593"),
+                ObjectId("6149da2fef0911faa0f7a594"),
+                ObjectId("6149da2fef0911faa0f7a595")
+        ]
+}
+> db.users.find().pretty()
+{
+        "_id" : ObjectId("6149a41e9c43c1c01c22c564"),
+        "fname" : "manasi",
+        "lname" : "shinde",
+        "gender" : "female",
+        "email" : "mansi@gmail.com",
+        "ip" : 123009
+}
+{
+        "_id" : ObjectId("6149a43e9c43c1c01c22c565"),
+        "fname" : "manasi",
+        "lname" : "shinde",
+        "gender" : "female",
+        "email" : "mansi@gmail.com",
+        "ip" : 123009,
+        "age" : 21
+}
+{
+        "_id" : ObjectId("6149d8a8a5c95f3c7e29d0fb"),
+        "fname" : "manasi",
+        "lname" : "shinde",
+        "gender" : "female",
+        "email" : "mansi@gmail.com",
+        "ip" : 123009,
+        "age" : 21
+}
+{ "_id" : ObjectId("6149d8a8a5c95f3c7e29d0fc"), "fname" : "" }
+{
+        "_id" : ObjectId("6149da2fef0911faa0f7a593"),
+        "fname" : "krishna",
+        "lname" : "gilbile",
+        "gender" : "male",
+        "email" : "krishna@gmail.com",
+        "ip" : 133009,
+        "age" : 11
+}
+{
+        "_id" : ObjectId("6149da2fef0911faa0f7a594"),
+        "fname" : "teju",
+        "lname" : "gund",
+        "gender" : "female",
+        "email" : "teju@gmail.com",
+        "ip" : 123009,
+        "age" : 22
+}
+{
+        "_id" : ObjectId("6149da2fef0911faa0f7a595"),
+        "fname" : "ishwari",
+        "lname" : "gilbile",
+        "gender" : "female",
+        "email" : "ishwari@gmail.com",
+        "ip" : 124567,
+        "age" : 12
+}
+> db.users.insertMany([{fname:"viraj",lname:"gilbile",gender:"male",email:"viraj@gmail.com",ip:136009,age:5},{fname:"anandi",lname:"gilbile",gender:"female",email:"anandi@gmail.com",ip:123409,age:5},{fname:"sanika",lname:"shinde",gender:"female",email:"sanika@gmail.com",ip:124767,age:18}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("6149dc1eef0911faa0f7a596"),
+                ObjectId("6149dc1eef0911faa0f7a597"),
+                ObjectId("6149dc1eef0911faa0f7a598")
+        ]
+}
+> db.users.find().pretty()
+{
+        "_id" : ObjectId("6149a41e9c43c1c01c22c564"),
+        "fname" : "manasi",
+        "lname" : "shinde",
+        "gender" : "female",
+        "email" : "mansi@gmail.com",
+        "ip" : 123009
+}
+{
+        "_id" : ObjectId("6149a43e9c43c1c01c22c565"),
+        "fname" : "manasi",
+        "lname" : "shinde",
+        "gender" : "female",
+        "email" : "mansi@gmail.com",
+        "ip" : 123009,
+        "age" : 21
+}
+{
+        "_id" : ObjectId("6149d8a8a5c95f3c7e29d0fb"),
+        "fname" : "manasi",
+        "lname" : "shinde",
+        "gender" : "female",
+        "email" : "mansi@gmail.com",
+        "ip" : 123009,
+        "age" : 21
+}
+{ "_id" : ObjectId("6149d8a8a5c95f3c7e29d0fc"), "fname" : "" }
+{
+        "_id" : ObjectId("6149da2fef0911faa0f7a593"),
+        "fname" : "krishna",
+        "lname" : "gilbile",
+        "gender" : "male",
+        "email" : "krishna@gmail.com",
+        "ip" : 133009,
+        "age" : 11
+}
+{
+        "_id" : ObjectId("6149da2fef0911faa0f7a594"),
+        "fname" : "teju",
+        "lname" : "gund",
+        "gender" : "female",
+        "email" : "teju@gmail.com",
+        "ip" : 123009,
+        "age" : 22
+}
+{
+        "_id" : ObjectId("6149da2fef0911faa0f7a595"),
+        "fname" : "ishwari",
+        "lname" : "gilbile",
+        "gender" : "female",
+        "email" : "ishwari@gmail.com",
+        "ip" : 124567,
+        "age" : 12
+}
+{
+        "_id" : ObjectId("6149dc1eef0911faa0f7a596"),
+        "fname" : "viraj",
+        "lname" : "gilbile",
+        "gender" : "male",
+        "email" : "viraj@gmail.com",
+        "ip" : 136009,
+        "age" : 5
+}
+{
+        "_id" : ObjectId("6149dc1eef0911faa0f7a597"),
+        "fname" : "anandi",
+        "lname" : "gilbile",
+        "gender" : "female",
+        "email" : "anandi@gmail.com",
+        "ip" : 123409,
+        "age" : 5
+}
+{
+        "_id" : ObjectId("6149dc1eef0911faa0f7a598"),
+        "fname" : "sanika",
+        "lname" : "shinde",
+        "gender" : "female",
+        "email" : "sanika@gmail.com",
+        "ip" : 124767,
+        "age" : 18
+}
+> db.users.insertMany([{fname:"kanchan",lname:"karande",gender:"female",email:"kanchan@gmail.com",ip:136879,age:22},{fname:"yash",lname:"chavan",gender:"male",email:"yash@gmail.com",ip:128809,age:19},{fname:"isha",lname:"chavan",gender:"female",email:"isha@gmail.com",ip:124367,age:17}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("6149dd2aef0911faa0f7a599"),
+                ObjectId("6149dd2aef0911faa0f7a59a"),
+                ObjectId("6149dd2aef0911faa0f7a59b")
+        ]
+}
+> db.users.find().pretty()
+{
+        "_id" : ObjectId("6149a41e9c43c1c01c22c564"),
+        "fname" : "manasi",
+        "lname" : "shinde",
+        "gender" : "female",
+        "email" : "mansi@gmail.com",
+        "ip" : 123009
+}
+{
+        "_id" : ObjectId("6149a43e9c43c1c01c22c565"),
+        "fname" : "manasi",
+        "lname" : "shinde",
+        "gender" : "female",
+        "email" : "mansi@gmail.com",
+        "ip" : 123009,
+        "age" : 21
+}
+{
+        "_id" : ObjectId("6149d8a8a5c95f3c7e29d0fb"),
+        "fname" : "manasi",
+        "lname" : "shinde",
+        "gender" : "female",
+        "email" : "mansi@gmail.com",
+        "ip" : 123009,
+        "age" : 21
+}
+{ "_id" : ObjectId("6149d8a8a5c95f3c7e29d0fc"), "fname" : "" }
+{
+        "_id" : ObjectId("6149da2fef0911faa0f7a593"),
+        "fname" : "krishna",
+        "lname" : "gilbile",
+        "gender" : "male",
+        "email" : "krishna@gmail.com",
+        "ip" : 133009,
+        "age" : 11
+}
+{
+        "_id" : ObjectId("6149da2fef0911faa0f7a594"),
+        "fname" : "teju",
+        "lname" : "gund",
+        "gender" : "female",
+        "email" : "teju@gmail.com",
+        "ip" : 123009,
+        "age" : 22
+}
+{
+        "_id" : ObjectId("6149da2fef0911faa0f7a595"),
+        "fname" : "ishwari",
+        "lname" : "gilbile",
+        "gender" : "female",
+        "email" : "ishwari@gmail.com",
+        "ip" : 124567,
+        "age" : 12
+}
+{
+        "_id" : ObjectId("6149dc1eef0911faa0f7a596"),
+        "fname" : "viraj",
+        "lname" : "gilbile",
+        "gender" : "male",
+        "email" : "viraj@gmail.com",
+        "ip" : 136009,
+        "age" : 5
+}
+{
+        "_id" : ObjectId("6149dc1eef0911faa0f7a597"),
+        "fname" : "anandi",
+        "lname" : "gilbile",
+        "gender" : "female",
+        "email" : "anandi@gmail.com",
+        "ip" : 123409,
+        "age" : 5
+}
+{
+        "_id" : ObjectId("6149dc1eef0911faa0f7a598"),
+        "fname" : "sanika",
+        "lname" : "shinde",
+        "gender" : "female",
+        "email" : "sanika@gmail.com",
+        "ip" : 124767,
+        "age" : 18
+}
+{
+        "_id" : ObjectId("6149dd2aef0911faa0f7a599"),
+        "fname" : "kanchan",
+        "lname" : "karande",
+        "gender" : "female",
+        "email" : "kanchan@gmail.com",
+        "ip" : 136879,
+        "age" : 22
+}
+{
+        "_id" : ObjectId("6149dd2aef0911faa0f7a59a"),
+        "fname" : "yash",
+        "lname" : "chavan",
+        "gender" : "male",
+        "email" : "yash@gmail.com",
+        "ip" : 128809,
+        "age" : 19
+}
+{
+        "_id" : ObjectId("6149dd2aef0911faa0f7a59b"),
+        "fname" : "isha",
+        "lname" : "chavan",
+        "gender" : "female",
+        "email" : "isha@gmail.com",
+        "ip" : 124367,
+        "age" : 17
+}
+> db.users.findOne().pretty()
+uncaught exception: TypeError: db.users.findOne(...).pretty is not a function :
+@(shell):1:1
+> db.users.findOne()
+{
+        "_id" : ObjectId("6149a41e9c43c1c01c22c564"),
+        "fname" : "manasi",
+        "lname" : "shinde",
+        "gender" : "female",
+        "email" : "mansi@gmail.com",
+        "ip" : 123009
+}
+> db.users.update({"_id":objectId("6149a41e9c43c1c01c22c564")},{$set:{fname:"jack",lname:"john"}})
+uncaught exception: ReferenceError: objectId is not defined :
+@(shell):1:18
+> db.users.update({"_id":ObjectId("6149a41e9c43c1c01c22c564")},{$set:{fname:"jack",lname:"john"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.users.findOne()
+{
+        "_id" : ObjectId("6149a41e9c43c1c01c22c564"),
+        "fname" : "jack",
+        "lname" : "john",
+        "gender" : "female",
+        "email" : "mansi@gmail.com",
+        "ip" : 123009
+}
+> db.users.updateMany({age:22},{$set:{fname:"tejshree",lname:"gund"}})
+{ "acknowledged" : true, "matchedCount" : 2, "modifiedCount" : 2 }
+> db.users.find().pretty()
+{
+        "_id" : ObjectId("6149a41e9c43c1c01c22c564"),
+        "fname" : "jack",
+        "lname" : "john",
+        "gender" : "female",
+        "email" : "mansi@gmail.com",
+        "ip" : 123009
+}
+{
+        "_id" : ObjectId("6149a43e9c43c1c01c22c565"),
+        "fname" : "manasi",
+        "lname" : "shinde",
+        "gender" : "female",
+        "email" : "mansi@gmail.com",
+        "ip" : 123009,
+        "age" : 21
+}
+{
+        "_id" : ObjectId("6149d8a8a5c95f3c7e29d0fb"),
+        "fname" : "manasi",
+        "lname" : "shinde",
+        "gender" : "female",
+        "email" : "mansi@gmail.com",
+        "ip" : 123009,
+        "age" : 21
+}
+{ "_id" : ObjectId("6149d8a8a5c95f3c7e29d0fc"), "fname" : "" }
+{
+        "_id" : ObjectId("6149da2fef0911faa0f7a593"),
+        "fname" : "krishna",
+        "lname" : "gilbile",
+        "gender" : "male",
+        "email" : "krishna@gmail.com",
+        "ip" : 133009,
+        "age" : 11
+}
+{
+        "_id" : ObjectId("6149da2fef0911faa0f7a594"),
+        "fname" : "tejshree",
+        "lname" : "gund",
+        "gender" : "female",
+        "email" : "teju@gmail.com",
+        "ip" : 123009,
+        "age" : 22
+}
+{
+        "_id" : ObjectId("6149da2fef0911faa0f7a595"),
+        "fname" : "ishwari",
+        "lname" : "gilbile",
+        "gender" : "female",
+        "email" : "ishwari@gmail.com",
+        "ip" : 124567,
+        "age" : 12
+}
+{
+        "_id" : ObjectId("6149dc1eef0911faa0f7a596"),
+        "fname" : "viraj",
+        "lname" : "gilbile",
+        "gender" : "male",
+        "email" : "viraj@gmail.com",
+        "ip" : 136009,
+        "age" : 5
+}
+{
+        "_id" : ObjectId("6149dc1eef0911faa0f7a597"),
+        "fname" : "anandi",
+        "lname" : "gilbile",
+        "gender" : "female",
+        "email" : "anandi@gmail.com",
+        "ip" : 123409,
+        "age" : 5
+}
+{
+        "_id" : ObjectId("6149dc1eef0911faa0f7a598"),
+        "fname" : "sanika",
+        "lname" : "shinde",
+        "gender" : "female",
+        "email" : "sanika@gmail.com",
+        "ip" : 124767,
+        "age" : 18
+}
+{
+        "_id" : ObjectId("6149dd2aef0911faa0f7a599"),
+        "fname" : "tejshree",
+        "lname" : "gund",
+        "gender" : "female",
+        "email" : "kanchan@gmail.com",
+        "ip" : 136879,
+        "age" : 22
+}
+{
+        "_id" : ObjectId("6149dd2aef0911faa0f7a59a"),
+        "fname" : "yash",
+        "lname" : "chavan",
+        "gender" : "male",
+        "email" : "yash@gmail.com",
+        "ip" : 128809,
+        "age" : 19
+}
+{
+        "_id" : ObjectId("6149dd2aef0911faa0f7a59b"),
+        "fname" : "isha",
+        "lname" : "chavan",
+        "gender" : "female",
+        "email" : "isha@gmail.com",
+        "ip" : 124367,
+        "age" : 17
+}
+> db.users.remove("_id":ObjectId("6149dd2aef0911faa0f7a59b")
+... )
+uncaught exception: SyntaxError: missing ) after argument list :
+@(shell):1:21
+> db.users.remove("_id":ObjectId("6149dd2aef0911faa0f7a59b"))
+uncaught exception: SyntaxError: missing ) after argument list :
+@(shell):1:21
+> db.users.remove({"_id":ObjectId("6149dd2aef0911faa0f7a59b")})
+WriteResult({ "nRemoved" : 1 })
+> db.users.find().pretty()
+{
+        "_id" : ObjectId("6149a41e9c43c1c01c22c564"),
+        "fname" : "jack",
+        "lname" : "john",
+        "gender" : "female",
+        "email" : "mansi@gmail.com",
+        "ip" : 123009
+}
+{
+        "_id" : ObjectId("6149a43e9c43c1c01c22c565"),
+        "fname" : "manasi",
+        "lname" : "shinde",
+        "gender" : "female",
+        "email" : "mansi@gmail.com",
+        "ip" : 123009,
+        "age" : 21
+}
+{
+        "_id" : ObjectId("6149d8a8a5c95f3c7e29d0fb"),
+        "fname" : "manasi",
+        "lname" : "shinde",
+        "gender" : "female",
+        "email" : "mansi@gmail.com",
+        "ip" : 123009,
+        "age" : 21
+}
+{ "_id" : ObjectId("6149d8a8a5c95f3c7e29d0fc"), "fname" : "" }
+{
+        "_id" : ObjectId("6149da2fef0911faa0f7a593"),
+        "fname" : "krishna",
+        "lname" : "gilbile",
+        "gender" : "male",
+        "email" : "krishna@gmail.com",
+        "ip" : 133009,
+        "age" : 11
+}
+{
+        "_id" : ObjectId("6149da2fef0911faa0f7a594"),
+        "fname" : "tejshree",
+        "lname" : "gund",
+        "gender" : "female",
+        "email" : "teju@gmail.com",
+        "ip" : 123009,
+        "age" : 22
+}
+{
+        "_id" : ObjectId("6149da2fef0911faa0f7a595"),
+        "fname" : "ishwari",
+        "lname" : "gilbile",
+        "gender" : "female",
+        "email" : "ishwari@gmail.com",
+        "ip" : 124567,
+        "age" : 12
+}
+{
+        "_id" : ObjectId("6149dc1eef0911faa0f7a596"),
+        "fname" : "viraj",
+        "lname" : "gilbile",
+        "gender" : "male",
+        "email" : "viraj@gmail.com",
+        "ip" : 136009,
+        "age" : 5
+}
+{
+        "_id" : ObjectId("6149dc1eef0911faa0f7a597"),
+        "fname" : "anandi",
+        "lname" : "gilbile",
+        "gender" : "female",
+        "email" : "anandi@gmail.com",
+        "ip" : 123409,
+        "age" : 5
+}
+{
+        "_id" : ObjectId("6149dc1eef0911faa0f7a598"),
+        "fname" : "sanika",
+        "lname" : "shinde",
+        "gender" : "female",
+        "email" : "sanika@gmail.com",
+        "ip" : 124767,
+        "age" : 18
+}
+{
+        "_id" : ObjectId("6149dd2aef0911faa0f7a599"),
+        "fname" : "tejshree",
+        "lname" : "gund",
+        "gender" : "female",
+        "email" : "kanchan@gmail.com",
+        "ip" : 136879,
+        "age" : 22
+}
+{
+        "_id" : ObjectId("6149dd2aef0911faa0f7a59a"),
+        "fname" : "yash",
+        "lname" : "chavan",
+        "gender" : "male",
+        "email" : "yash@gmail.com",
+        "ip" : 128809,
+        "age" : 19
+}
+> db.users.deleteOne({age:22})
+{ "acknowledged" : true, "deletedCount" : 1 }
+> db.users.delete({age:22})
+uncaught exception: TypeError: db.users.delete is not a function :
+@(shell):1:1
+> db.users.deleteMany({age:22})
+{ "acknowledged" : true, "deletedCount" : 1 }
+> db.users.deleteMany({age:22})
+{ "acknowledged" : true, "deletedCount" : 0 }
+> db.dropDatabase()
+{ "ok" : 1 }
+> show collections
+> show Collections
+uncaught exception: Error: don't know how to show [Collections] :
+shellHelper.show@src/mongo/shell/utils.js:1211:11
+shellHelper@src/mongo/shell/utils.js:838:15
+@(shellhelp2):1:1
+> show collections
+> db.users.find().pretty()
+>
+
+
+
