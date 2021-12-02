@@ -5,7 +5,7 @@ I'm a passionate full stack web developer. Excellent problem-solving skills and 
 <br/>
 <br/>
 
-🌱 I’m currently learning **Data Structures and Algorithms** and **MERN Stack*
+🌱 I’m currently learning **Data Structures and Algorithms** and **MERN Stack**
 
 💬 Ask me about **React/HTML/CSS/JAVASCRIPT**
 
