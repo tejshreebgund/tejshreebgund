@@ -1,4 +1,4 @@
-<h1 align="left">Hi <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="-100px">, I'm Tejshree Gund</h1>
+<h1 align="left">Hi, I'm Tejshree Gund</h1>
 <img align='right' src="https://media3.giphy.com/media/L1R1tvI9svkIWwpVYr/200w.webp?cid=ecf05e47r256aiuds2okpvf491p7uu1qkt8q8q0af8jw2j8c&rid=200w.webp&ct=g" width="230">
 I'm a passionate full stack web developer.
 <br/>
